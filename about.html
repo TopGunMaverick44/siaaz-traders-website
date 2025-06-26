@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - SIAAZ Traders Co.</title>
+  <!-- Exact same Roboto font import as H2O Home -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            roboto: ['Roboto', 'sans-serif'],
+            'roboto-slab': ['Roboto Slab', 'serif'],
+          },
+          colors: {
+            'gold-primary': '#C9B924',
+            'dark-bg': '#2c2d33',
+            'light-gray': '#f8f8f8',
+            'text-gray': '#666',
+            'border-gray': '#e5e5e5',
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    /* Force Roboto font on everything - exactly like H2O Home */
+    html, body {
+      font-family: 'Roboto', sans-serif !important;
+      background-color: #ffffff;
+      color: #333;
+    }
+    
+    /* Headings use Roboto with semi-bold weight - matching H2O Home style */
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Roboto', sans-serif !important;
+      font-weight: 600 !important;
+      color: #2c2d33;
+    }
+    
+    /* Main heading matches H2O's "A Message from Our CEO" style */
+    .elementor-heading-title.elementor-size-default {
+      font-size: 32px;
+      line-height: 1.3;
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
+    
+    /* Navigation and body text */
+    nav, nav a, p, span, div {
+      font-family: 'Roboto', sans-serif !important;
+    }
+    
+    /* Gold accent color like H2O Home */
+    .gold {
+      color: #C9B924 !important;
+    }
+    
+    /* Header styling similar to H2O Home */
+    .header-container {
+      background: linear-gradient(135deg, #2c2d33 0%, #3a3b41 100%);
+    }
+    
+    /* White text styling for header */
+    .white {
+      color: white !important;
+    }
+    
+    /* Content styling matching H2O Home */
+    .m-bottom {
+      margin-bottom: 16px;
+    }
+    
+    .m-bottom-2 {
+      margin-bottom: 32px;
+    }
+    
+    .m-bottom-3 {
+      margin-bottom: 48px;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800 font-roboto">
+
+  <!-- Header matching H2O Home style -->
+  <header class="w-full header-container shadow-lg">
+    <div class="border-b border-gray-700">
+      <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="flex items-center">
+            <a href="index.html" class="text-2xl font-serif font-bold text-white">SIAAZ Traders Co.</a>
+        </div>
+        
+        <!-- Contact & Search exactly like H2O Home -->
+        <div class="flex items-center space-x-6">
+          <a href="tel:+923041113304" class="flex items-center text-white hover:text-gold-primary transition">
+            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 10 16">
+              <path d="M8 0C9.09375 0 10 0.90625 10 2V14C10 15.125 9.09375 16 8 16H2C0.875 16 0 15.125 0 14V2C0 0.90625 0.875 0 2 0H8ZM9 14V2C9 1.46875 8.53125 1 8 1H2C1.4375 1 1 1.46875 1 2V14C1 14.5625 1.4375 15 2 15H8C8.53125 15 9 14.5625 9 14ZM6 12.5C6.25 12.5 6.5 12.75 6.5 13C6.5 13.2812 6.25 13.5 6 13.5H4C3.71875 13.5 3.5 13.2812 3.5 13C3.5 12.75 3.71875 12.5 4 12.5H6Z"/>
+            </svg>
+            <span class="text-sm font-medium">+92 304 1113304</span>
+          </a>
+          <button class="flex items-center text-white hover:text-gold-primary transition">
+            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 17 16">
+              <path d="M15.8438 15.1562C16.0312 15.3438 16.0312 15.6875 15.8438 15.875C15.75 15.9688 15.625 16 15.5 16C15.3438 16 15.2188 15.9688 15.0938 15.875L10.6875 11.4375C9.53125 12.4375 8.0625 13 6.46875 13C2.90625 13 0 10.0938 0 6.5C0 2.9375 2.875 0 6.46875 0C10.0312 0 12.9688 2.9375 12.9688 6.5C12.9688 8.125 12.4062 9.59375 11.4062 10.75L15.8438 15.1562ZM6.5 12C9.53125 12 12 9.5625 12 6.5C12 3.46875 9.53125 1 6.5 1C3.4375 1 1 3.46875 1 6.5C1 9.53125 3.4375 12 6.5 12Z"/>
+            </svg>
+            <span class="text-sm font-medium">Search</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="max-w-7xl mx-auto px-6">
+      <nav class="flex justify-center py-4">
+        <div class="flex space-x-28">
+          <a href="products.html" class="text-white hover:text-gold-primary transition font-medium">Products</a>
+          <a href="brands.html" class="text-white hover:text-gold-primary transition font-medium">Brands</a>
+          <a href="about.html" class="text-gold-primary font-medium">About Us</a>
+          <a href="projects.html" class="text-white hover:text-gold-primary transition font-medium">Projects</a>
+          <a href="contact.html" class="text-white hover:text-gold-primary transition font-medium">Contact Us</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <div class="bg-gray-100 py-6">
+
+
+  <!-- CEO Message Section (H2O Home layout) -->
+  <main class="max-w-7xl mx-auto px-6 py-16">
+    <section class="grid md:grid-cols-2 gap-12 items-center mb-16">
+      <div>
+        <p class="gold m-bottom">Excellence in Sanitary Solutions</p>
+        <h2 class="elementor-heading-title elementor-size-default m-bottom-3">A Message from Our Leadership</h2>
+        <div class="m-bottom-2">
+          <p class="text-base leading-relaxed text-text-gray mb-4">
+            Welcome to SIAAZ Traders Co.! For over a decade, we have been dedicated to creating exceptional bathroom spaces that combine functionality with timeless elegance. Our journey began with a vision to provide world-class sanitary fixtures that transform ordinary spaces into luxurious sanctuaries.
+          </p>
+          <p class="text-base leading-relaxed text-text-gray mb-4">
+            As we continue to grow, we are excited to bring our expertise and passion for excellence to more clients. Our commitment goes beyond just providing products – we create experiences that elevate your living spaces.
+          </p>
+          <p class="text-base leading-relaxed text-text-gray">
+            Thank you for trusting us as your partner in redefining bathroom luxury. We look forward to helping you create beautiful and inspiring spaces that stand the test of time.
+          </p>
+        </div>
+        <p class="gold">FOUNDER / CEO - SIAAZ TRADERS CO.</p>
+        <h3 class="elementor-heading-title elementor-size-default">LEADERSHIP TEAM</h3>
+      </div>
+      <div>
+        <img src="https://via.placeholder.com/500x600/f0f0f0/666?text=CEO+Message" alt="CEO Message" class="w-full h-96 object-cover rounded-lg shadow-lg">
+      </div>
+    </section>
+
+    <!-- Company Values (H2O Home style) -->
+    <section class="bg-light-gray p-12 rounded-lg mb-16">
+      <p class="gold m-bottom text-center">Our Excellence</p>
+      <h2 class="elementor-heading-title elementor-size-default text-center m-bottom-3">Commitment to Quality</h2>
+      <div class="max-w-4xl mx-auto text-center">
+        <p class="text-base leading-relaxed text-text-gray mb-4">
+          At SIAAZ Traders Co., we are committed to offering only top-tier products from brands renowned for luxury and innovation. Each of our products is selected for their reputation in excellence and craftsmanship, featuring high-quality materials, innovative designs, and enduring durability.
+        </p>
+        <p class="text-base leading-relaxed text-text-gray">
+          We adhere to the strictest standards of quality control, ensuring that each item meets our rigorous criteria for aesthetics and performance. When you choose us, you're not merely selecting sanitary fittings—you're investing in timeless elegance and uncompromising quality.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer (H2O Home style) -->
+  <footer class="header-container text-white py-12">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <div class="mb-6">
+        <img src="Neutral Elegant Minimalist Jewelry Logo.png" alt="SIAAZ Logo" class="w-16 h-12 object-contain mx-auto mb-4">
+        <h3 class="text-xl font-roboto font-semibold mb-2">SIAAZ Traders Co.</h3>
+        <p class="text-gray-300">Premium Sanitary Solutions</p>
+      </div>
+      <div class="border-t border-gray-600 pt-6">
+        <p class="text-sm text-gray-400">&copy; 2025 SIAAZ Traders Co. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

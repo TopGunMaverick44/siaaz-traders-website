@@ -1,0 +1,322 @@
+[
+    {
+      "id": 1,
+      "name": "Elegant Basin Mixer",
+      "category": "Bathroom Fittings",
+      "subcategory": "Basin Mixers",
+      "brand": "Grohe",
+      "price": 12500,
+      "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80",
+      "description": "A modern chrome finish basin mixer with single lever operation.",
+      "tags": ["chrome", "modern", "single lever"],
+      "features": [
+        "Water-saving technology",
+        "Easy installation",
+        "5-year warranty"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Rainfall Shower Panel",
+      "category": "Shower Systems",
+      "subcategory": "Rain Showers",
+      "brand": "Hansgrohe",
+      "price": 18500,
+      "image": "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=400&q=80",
+      "description": "Luxurious rainfall shower panel with adjustable jets and thermostatic control.",
+      "tags": ["rain", "shower", "panel", "luxury"],
+      "features": [
+        "Adjustable jets",
+        "Anti-limescale",
+        "Thermostatic control"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Classic Ceramic Basin",
+      "category": "Sanitaryware",
+      "subcategory": "Wash Basins",
+      "brand": "Porta",
+      "price": 6500,
+      "image": "https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80",
+      "description": "Timeless ceramic wash basin, easy to clean and maintain.",
+      "tags": ["ceramic", "classic", "easy clean"],
+      "features": [
+        "Scratch resistant",
+        "Glossy finish",
+        "Universal fitting"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Freestanding Bathtub",
+      "category": "Bathtubs",
+      "subcategory": "Free Standing Bathtub",
+      "brand": "Kohler",
+      "price": 42000,
+      "image": "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80",
+      "description": "Spacious freestanding bathtub for a luxurious bathing experience.",
+      "tags": ["bathtub", "freestanding", "luxury"],
+      "features": [
+        "Acrylic material",
+        "Easy to install",
+        "Modern design"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Matte Black Towel Rail",
+      "category": "Bathroom Accessories",
+      "subcategory": "Towel Rail",
+      "brand": "Sonia",
+      "price": 3200,
+      "image": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=400&q=80",
+      "description": "Minimalist matte black towel rail for modern bathrooms.",
+      "tags": ["towel", "rail", "matte black"],
+      "features": [
+        "Rust resistant",
+        "Easy wall mount",
+        "Contemporary look"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Porcelain Floor Tile",
+      "category": "Floor Tiles",
+      "subcategory": "Porcelain",
+      "brand": "Rak Ceramics",
+      "price": 1800,
+      "image": "https://images.unsplash.com/photo-1503389152951-9c3d8b6e9c94?auto=format&fit=crop&w=400&q=80",
+      "description": "Durable porcelain floor tile with matte finish.",
+      "tags": ["tile", "porcelain", "floor"],
+      "features": [
+        "Slip resistant",
+        "Matte finish",
+        "Easy to clean"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Marble Countertop",
+      "category": "Slabs & Countertops",
+      "subcategory": "Marble",
+      "brand": "Marble World",
+      "price": 35000,
+      "image": "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=400&q=80",
+      "description": "Elegant marble countertop for kitchens and bathrooms.",
+      "tags": ["marble", "countertop", "luxury"],
+      "features": [
+        "Natural stone",
+        "Polished surface",
+        "Custom sizes"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Wall Mounted Paper Holder",
+      "category": "Bathroom Accessories",
+      "subcategory": "Paper Holder",
+      "brand": "Grohe",
+      "price": 1200,
+      "image": "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80",
+      "description": "Sleek wall mounted paper holder in chrome finish.",
+      "tags": ["paper holder", "chrome", "wall mounted"],
+      "features": [
+        "Easy installation",
+        "Corrosion resistant",
+        "Modern look"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Granite Floor Tile",
+      "category": "Floor Tiles",
+      "subcategory": "Granite",
+      "brand": "Granite Pro",
+      "price": 2200,
+      "image": "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80",
+      "description": "Premium granite floor tile for high-traffic areas.",
+      "tags": ["granite", "tile", "floor"],
+      "features": [
+        "High durability",
+        "Natural stone",
+        "Polished finish"
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Three Hole Basin Mixer",
+      "category": "Bathroom Fittings",
+      "subcategory": "Three Hole Basin Mixer",
+      "brand": "Jaquar",
+      "price": 14500,
+      "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80",
+      "description": "Classic three hole basin mixer with ergonomic handles.",
+      "tags": ["basin mixer", "three hole", "classic"],
+      "features": [
+        "Ergonomic design",
+        "Easy to use",
+        "Long lasting"
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Bidet Spray Set",
+      "category": "Sanitaryware",
+      "subcategory": "Bidets",
+      "brand": "Porta",
+      "price": 2100,
+      "image": "https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80",
+      "description": "Handheld bidet spray set for enhanced hygiene.",
+      "tags": ["bidet", "spray", "hygiene"],
+      "features": [
+        "Flexible hose",
+        "Easy to install",
+        "Water saving"
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Walk-in Bathtub",
+      "category": "Bathtubs",
+      "subcategory": "Walk-in Bathtub",
+      "brand": "Kohler",
+      "price": 55000,
+      "image": "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80",
+      "description": "Safe and accessible walk-in bathtub for seniors.",
+      "tags": ["bathtub", "walk-in", "accessible"],
+      "features": [
+        "Low entry threshold",
+        "Slip resistant",
+        "Built-in seat"
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Ceramic Wall Tile",
+      "category": "Wall Tiles",
+      "subcategory": "Glossy Tiles",
+      "brand": "Rak Ceramics",
+      "price": 950,
+      "image": "https://images.unsplash.com/photo-1503389152951-9c3d8b6e9c94?auto=format&fit=crop&w=400&q=80",
+      "description": "Glossy ceramic wall tile for a bright, clean look.",
+      "tags": ["wall tile", "ceramic", "glossy"],
+      "features": [
+        "Glossy finish",
+        "Easy to clean",
+        "Moisture resistant"
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Modern Towel Shelf",
+      "category": "Bathroom Accessories",
+      "subcategory": "Towel Shelf",
+      "brand": "Sonia",
+      "price": 3800,
+      "image": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=400&q=80",
+      "description": "Wall-mounted towel shelf with ample storage.",
+      "tags": ["towel", "shelf", "storage"],
+      "features": [
+        "Stainless steel",
+        "Easy wall mount",
+        "Rust resistant"
+      ]
+    },
+    {
+      "id": 15,
+      "name": "Hand Shower Set",
+      "category": "Shower Systems",
+      "subcategory": "Hand Showers",
+      "brand": "Hansgrohe",
+      "price": 7200,
+      "image": "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=400&q=80",
+      "description": "Versatile hand shower set with multiple spray modes.",
+      "tags": ["shower", "hand shower", "versatile"],
+      "features": [
+        "Multiple spray modes",
+        "Flexible hose",
+        "Easy to clean"
+      ]
+    },
+    {
+      "id": 16,
+      "name": "Long Basin Mixer",
+      "category": "Bathroom Fittings",
+      "subcategory": "Long Basin Mixer",
+      "brand": "Grohe",
+      "price": 13500,
+      "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80",
+      "description": "Long spout basin mixer for large sinks.",
+      "tags": ["basin mixer", "long spout", "modern"],
+      "features": [
+        "Long reach",
+        "Smooth operation",
+        "Water saving"
+      ]
+    },
+    {
+      "id": 17,
+      "name": "Marble Vanity Top",
+      "category": "Slabs & Countertops",
+      "subcategory": "Marble",
+      "brand": "Marble World",
+      "price": 27000,
+      "image": "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=400&q=80",
+      "description": "Elegant marble vanity top for bathrooms.",
+      "tags": ["marble", "vanity", "luxury"],
+      "features": [
+        "Custom sizes",
+        "Polished finish",
+        "Natural stone"
+      ]
+    },
+    {
+      "id": 18,
+      "name": "Ceramic Bidet",
+      "category": "Sanitaryware",
+      "subcategory": "Bidets",
+      "brand": "Porta",
+      "price": 7800,
+      "image": "https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80",
+      "description": "Classic ceramic bidet for enhanced hygiene.",
+      "tags": ["bidet", "ceramic", "classic"],
+      "features": [
+        "Easy to clean",
+        "Universal fitting",
+        "Glossy finish"
+      ]
+    },
+    {
+      "id": 19,
+      "name": "Porcelain Wall Tile",
+      "category": "Wall Tiles",
+      "subcategory": "Matte Tiles",
+      "brand": "Rak Ceramics",
+      "price": 1100,
+      "image": "https://images.unsplash.com/photo-1503389152951-9c3d8b6e9c94?auto=format&fit=crop&w=400&q=80",
+      "description": "Matte porcelain wall tile for a subtle, modern look.",
+      "tags": ["wall tile", "porcelain", "matte"],
+      "features": [
+        "Matte finish",
+        "Moisture resistant",
+        "Easy to clean"
+      ]
+    },
+    {
+      "id": 20,
+      "name": "Acrylic Corner Bathtub",
+      "category": "Bathtubs",
+      "subcategory": "Corner Bathtub",
+      "brand": "Kohler",
+      "price": 39000,
+      "image": "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80",
+      "description": "Space-saving acrylic corner bathtub.",
+      "tags": ["bathtub", "corner", "acrylic"],
+      "features": [
+        "Space saving",
+        "Easy to install",
+        "Modern design"
+      ]
+    }
+  ]

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SIAAZ Traders Co.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+  <style>
+    body {
+      background-color: #dce9d6;
+      font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    }
+    .gold-hover:hover {
+      color: #bfa181 !important;
+    }
+    .dropdown-menu {
+      font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    }
+  </style>
+</head>
+<body class="text-[#22223b] font-sans">
+
+  <!-- Navbar -->
+  <header class="bg-[#a3b18a]/90 py-4 z-30 relative shadow">
+    <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">
+      <div class="flex items-center space-x-2">
+        <img src="Neutral Elegant Minimalist Jewelry Logo.png" alt="SIAAZ Logo" class="w-16 h-16 object-contain">
+        <h1 class="text-2xl font-serif tracking-wide">SIAAZ Traders Co.</h1>
+      </div>
+      <nav class="space-x-6 text-sm font-medium relative" x-data="dropdownMenu()">
+        <a href="about.html" class="gold-hover transition">About</a>
+        <div class="inline-block relative" style="padding-bottom:3.0rem"
+             @mouseenter="open = true" @mouseleave="open = false">
+          <a href="products.html"
+             class="gold-hover transition cursor-pointer"
+             @mouseenter="open = true"
+             @focus="open = true"
+             @mouseleave="open = false"
+          >Products</a>
+          <!-- Mega Dropdown -->
+          <div x-show="open"
+              x-transition:enter="transition ease-out duration-200"
+              x-transition:enter-start="opacity-0 -translate-y-2"
+              x-transition:enter-end="opacity-100 translate-y-0"
+              x-transition:leave="transition ease-in duration-150"
+              x-transition:leave-start="opacity-100 translate-y-0"
+              x-transition:leave-end="opacity-0 -translate-y-2"
+              class="dropdown-menu fixed left-1/2 top-24 transform -translate-x-1/2 bg-white text-[#22223b] rounded-2xl shadow-2xl flex z-50 w-full max-w-5xl min-h-[400px] mx-auto pt-8 pb-8 px-4"
+              @mouseenter="open = true"
+              @mouseleave="open = false"
+
+              
+          >
+            <!-- Main Categories -->
+            <ul class="flex flex-col gap-2 py-8 px-6 min-w-[240px] text-sm font-normal">
+              <template x-for="(cat, idx) in categories" :key="cat.key">
+                <li>
+                  <button
+                    @mouseenter="subOpen = cat.key"
+                    @focus="subOpen = cat.key"
+                    :class="subOpen === cat.key 
+                      ? 'bg-[#d6c34a] text-black font-semibold rounded-full px-4 py-2 flex items-center w-full transition shadow' 
+                      : 'hover:bg-[#f5f5dc] rounded-full px-4 py-2 flex items-center w-full transition'}"
+                    class="text-left group flex items-center justify-between"
+                    style="min-height:2.5rem"
+                  >
+                    <span x-text="cat.name" class="tracking-wide"></span>
+                    <svg 
+                      class="ml-2 w-4 h-4 flex-shrink-0 transition-colors duration-200"
+                      :class="subOpen === cat.key ? 'text-[#22223b]' : 'text-[#bfa181] group-hover:text-[#22223b]'"
+                      fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+                    </svg>
+                  </button>
+                </li>
+              </template>
+            </ul>
+            <!-- Subcategories -->
+            <div class="flex-1 flex flex-col justify-start px-12 py-8 min-w-[260px]">
+              <template x-if="subcategories[subOpen]">
+                <div>
+                  <ul class="flex flex-col gap-2 text-sm font-normal">
+                    <template x-for="sub in subcategories[subOpen]" :key="sub">
+                      <li class="py-1 hover:text-[#588157] cursor-pointer" x-text="sub"></li>
+                    </template>
+                  </ul>
+                </div>
+              </template>
+            </div>
+            <!-- Image Preview -->
+            <div class="flex items-center justify-center px-12 py-8 min-w-[340px]">
+              <template x-if="images[subOpen]">
+                <div class="relative">
+                  <div class="rounded-3xl shadow-2xl overflow-hidden bg-white transition-all duration-300" 
+                       style="width: 442px; height: 286px;">
+                    <img :src="images[subOpen]" alt="" class="w-full h-full object-cover" />
+                  </div>
+                </div>
+              </template>
+              <template x-if="!images[subOpen]">
+                <div class="rounded-3xl bg-gray-100 shadow-2xl flex items-center justify-center text-gray-400"  
+                     style="width: 442px; height: 286px;">
+                  No Image
+                </div>
+              </template>
+            </div>
+          </div>
+        </div>
+        <a href="#contact" class="gold-hover transition cursor-pointer">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section with Slideshow -->
+  <section class="relative h-screen overflow-hidden">
+    <!-- Slides -->
+    <div id="slider" class="relative w-full h-full">
+      <img src="sanitary1.jpg" class="slide absolute inset-0 w-full h-full object-cover opacity-100 transition-opacity duration-1000 ease-in-out" alt="Modern Bathroom Accessories" />
+      <img src="sanitary3.jpg" class="slide absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000 ease-in-out" alt="Elegant Sanitary Fittings" />
+      <img src="Step into this sleek, modern bathroom where every….jpg" class="slide absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000 ease-in-out" alt="Sleek Modern Bathroom" />
+    </div>
+
+    <!-- Overlay Text -->
+    <div class="absolute inset-0 bg-black/50 z-10 flex flex-col justify-center items-start px-8 sm:px-20 text-white">
+      <h1 class="text-4xl sm:text-6xl font-extrabold leading-tight max-w-2xl drop-shadow-lg">
+        Elegant Bathroom Accessories<br>Sets in Pakistan
+      </h1>
+      <p class="mt-6 max-w-xl text-lg text-gray-200 drop-shadow">
+        Discover curated Italian faucets, modern sanitary fittings, and timeless design—all in one place.
+      </p>
+      <a href="products.html" class="mt-6 inline-block bg-[#588157] text-white px-6 py-3 rounded hover:bg-[#3a5a40] transition font-semibold shadow">Browse Collection</a>
+    </div>
+
+    <!-- Navigation Arrows -->
+    <button onclick="prevSlide()" aria-label="Previous Slide" class="absolute top-1/2 left-4 z-20 text-white text-2xl bg-black/50 hover:bg-black/70 rounded-full p-2">&#10094;</button>
+    <button onclick="nextSlide()" aria-label="Next Slide" class="absolute top-1/2 right-4 z-20 text-white text-2xl bg-black/50 hover:bg-black/70 rounded-full p-2">&#10095;</button>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="max-w-5xl mx-auto px-4 py-16">
+    <h3 class="text-3xl font-semibold mb-4 text-[#588157]">About SIAAZ</h3>
+    <p class="text-gray-800 leading-relaxed">
+      SIAAZ Traders Co. is your trusted provider for premium sanitary fittings with a timeless aesthetic. We believe in blending function with beauty to enhance every living space.
+    </p>
+  </section>
+
+  <!-- Products -->
+  <section id="products" class="bg-[#f8fafc] py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <h3 class="text-3xl font-semibold mb-10 text-center text-[#588157]">Our Products</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-lg shadow p-4 border border-[#a3b18a]/30">
+          <img src="https://via.placeholder.com/300x200" alt="Luxury Tap" class="rounded mb-3">
+          <h4 class="text-xl font-medium text-[#3a5a40]">Luxury Tap</h4>
+          <p class="text-gray-700">Modern matte finish. Elegant design.</p>
+        </div>
+        <div class="bg-white rounded-lg shadow p-4 border border-[#a3b18a]/30">
+          <img src="https://via.placeholder.com/300x200" alt="Designer Shower" class="rounded mb-3">
+          <h4 class="text-xl font-medium text-[#3a5a40]">Designer Shower</h4>
+          <p class="text-gray-700">Rainfall experience. Italian craftsmanship.</p>
+        </div>
+        <div class="bg-white rounded-lg shadow p-4 border border-[#a3b18a]/30">
+          <img src="https://via.placeholder.com/300x200" alt="Elegant Basin" class="rounded mb-3">
+          <h4 class="text-xl font-medium text-[#3a5a40]">Elegant Basin</h4>
+          <p class="text-gray-700">Timeless ceramic. Easy to clean.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="max-w-4xl mx-auto px-4 py-16">
+    <h3 class="text-3xl font-semibold mb-6 text-center text-[#588157]">Get in Touch</h3>
+    <form class="grid gap-4" onsubmit="submitForm(event)">
+      <input type="text" placeholder="Your Name" required class="border border-[#a3b18a] p-2 rounded focus:ring-2 focus:ring-[#588157]" />
+      <input type="email" placeholder="Your Email" required class="border border-[#a3b18a] p-2 rounded focus:ring-2 focus:ring-[#588157]" />
+      <textarea placeholder="Your Message" required class="border border-[#a3b18a] p-2 rounded focus:ring-2 focus:ring-[#588157]"></textarea>
+      <button type="submit" class="bg-[#588157] text-white py-2 rounded hover:bg-[#3a5a40] transition font-semibold shadow">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Beautiful Minimalist Bath Background Footer -->
+  <footer class="relative mt-16 w-full min-h-[600px] flex items-center justify-center">
+    <div class="absolute inset-0 w-full h-full">
+      <img src="bg2.jpg" alt="Minimalist Bath" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-black/60"></div>
+    </div>
+    <div class="relative z-10 w-full max-w-6xl mx-auto px-4 py-16 text-white text-center">
+      <h2 class="text-3xl font-bold mb-4">Visit Our Showrooms</h2>
+      <p class="mb-6">Experience luxury and minimalism in person at our locations across Pakistan.</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-lg">
+        <div>
+          <strong>Karachi</strong><br>
+          Ground floor, 34-C, Khayaban-e-Bukhari, DHA Phase-6
+        </div>
+        <div>
+          <strong>Islamabad</strong><br>
+          Shop No. 1, Ground Floor, Shamsabad, Murree Road
+        </div>
+        <div>
+          <strong>Lahore</strong><br>
+          Phase 4, DD Block, 139 CCA, Sector CCA DHA Phase 3
+        </div>
+      </div>
+      <div class="mt-8 text-sm text-gray-200">
+        &copy; 2025 SIAAZ Traders Co. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Alpine.js Dropdown Data -->
+  <script>
+    function dropdownMenu() {
+      return {
+        open: false,
+        subOpen: 'bathroom-fittings',
+        categories: [
+          { key: 'bathroom-fittings', name: 'Bathroom Fittings' },
+          { key: 'bathtubs', name: 'Bathtubs' },
+          { key: 'sanitary-ware', name: 'Sanitaryware' },
+          { key: 'shower-systems', name: 'Shower Systems' },
+          { key: 'bathroom-accessories', name: 'Bathroom Accessories' },
+          { key: 'floor-tiles', name: 'Floor Tiles' },
+          { key: 'wall-tiles', name: 'Wall Tiles' },
+          { key: 'slabs-countertops', name: 'Slabs & Countertops' },
+          { key: 'tile-materials', name: 'Tiles Materials' }
+        ],
+        subcategories: {
+          'bathroom-fittings': [
+            'Angle Valves',
+            'Basin Mixers',
+            'Bath Mixer',
+            'Dial Mixers',
+            'Free Standing Basin Mixer',
+            'Long Basin Mixer',
+            'Shower Mixer',
+            'Spout',
+            'Three Hole Basin Mixer'
+          ],
+          'bathtubs': [
+            'Children Bathtub', 'Corner Bathtub', 'Free Standing Bathtub', 'Built-In Bathtub',
+            'Whirlpool Massage Bathtub', 'Jacuzzis', 'Walk-in Bathtub', 'Waterfall Bathtub', 'Window Bathtub'
+          ],
+          'sanitary-ware': ['Toilets', 'Bidets', 'Urinals', 'Wash Basins'],
+          'shower-systems': ['Rain Showers', 'Hand Showers', 'Shower Panels'],
+          'bathroom-accessories': ['Coat Hook', 'Vanities and Cabinets', 'Paper Holder', 'Towel Rail', 'Towel Ring', 'Towel Shelf'],
+          'floor-tiles': ['Porcelain', 'Ceramic', 'Marble', 'Granite'],
+          'wall-tiles': ['Glossy Tiles', 'Matte Tiles', 'Textured Tiles'],
+          'slabs-countertops': ['Quartz', 'Granite', 'Marble'],
+          'tile-materials': ['Porcelain', 'Ceramic', 'Stone']
+        },
+        images: {
+          'bathroom-fittings': 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80',
+          'bathtubs': 'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80',
+          'sanitary-ware': 'https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80',
+          'shower-systems': 'https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=400&q=80',
+          'bathroom-accessories': 'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=400&q=80',
+          'floor-tiles': 'https://images.unsplash.com/photo-1503389152951-9c3d8b6e9c94?auto=format&fit=crop&w=400&q=80',
+          'wall-tiles': 'https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80',
+          'slabs-countertops': 'https://images.unsplash.com/photo-1465101178521-c1a9136a3b99?auto=format&fit=crop&w=400&q=80',
+          'tile-materials': 'https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80'
+        }
+      }
+    }
+  </script>
+
+  <!-- JavaScript -->
+  <script>
+    // Slider logic
+    const slides = document.querySelectorAll(".slide");
+    let current = 0;
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.style.opacity = i === index ? "1" : "0";
+      });
+    }
+
+    function nextSlide() {
+      current = (current + 1) % slides.length;
+      showSlide(current);
+    }
+
+    function prevSlide() {
+      current = (current - 1 + slides.length) % slides.length;
+      showSlide(current);
+    }
+
+    // Auto slide every 5s
+    setInterval(nextSlide, 5000);
+    showSlide(current);
+
+    // Contact form logic
+    function submitForm(event) {
+      event.preventDefault();
+      alert("Thank you! Your message has been sent.");
+    }
+  </script>
+</body>
+</html>

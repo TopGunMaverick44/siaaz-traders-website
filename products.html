@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products | SIAAZ Traders Co.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { background-color: #dce9d6; font-family: 'Montserrat', Arial, Helvetica, sans-serif; }
+    .gold-hover:hover { color: #bfa181 !important; }
+    .cat-hover:hover, .cat-active { background-color: #f5f5dc; color: #22223b; }
+    .subcat-hover:hover { background-color: #e9e9d6; color: #588157; }
+    .product-card {
+      border: 1px solid #22223b;
+      border-radius: 1.25rem;
+      background: #fff;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: box-shadow 0.2s, border-color 0.2s;
+    }
+    .product-card:hover {
+      box-shadow: 0 4px 24px 0 rgba(34,34,59,0.08);
+      border-color: #111;
+    }
+    .product-img-area {
+      width: 100%;
+      aspect-ratio: 1/1;
+      display: flex;
+      align-items: stretch;
+      justify-content: stretch;
+      padding: 0;
+      border-bottom: none;
+      background: #fff;
+      flex-shrink: 0;
+    }
+    .product-img-area img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      margin: 0;
+      border-radius: 0;
+      background: #fff;
+    }
+    .product-info-bar {
+      background: #22223b;
+      color: #fff;
+      text-align: center;
+      padding: 1.1rem 1rem 1.1rem 1rem;
+      border-top: 1px solid #22223b;
+      min-height: 70px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-bottom: 0;
+      flex-shrink: 0;
+    }
+    .product-title {
+      font-size: 1.08rem;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .product-price {
+      font-size: 1rem;
+      font-weight: 500;
+      color: #e9e9d6;
+      letter-spacing: 0.5px;
+    }
+  </style>
+</head>
+<body class="text-[#22223b] font-sans">
+
+    <header class="w-full bg-[#a3b18a]/90">
+        <div class="max-w-7xl mx-auto px-6 pt-6 flex items-center">
+          <!-- Logo/Brand (top left) -->
+          <img src="Neutral Elegant Minimalist Jewelry Logo.png" alt="SIAAZ Logo" class="w-12 h-12 object-contain mr-3">
+          <a href="index.html" class="text-2xl font-serif font-bold text-charcoal">SIAAZ Traders Co.</a>
+
+        </div>
+        <!-- Decorative line -->
+        <div class="max-w-7xl mx-auto px-6">
+          <hr class="border-t border-[#dce9d6] my-4" />
+        </div>
+        <!-- Centered Navigation -->
+        <div class="w-full flex justify-center pb-4">
+          <nav class="flex space-x-24">
+            <a href="products.html" class="text-base font-medium text-[#22223b] hover:text-[#588157] transition">Products</a>
+            <a href="about.html" class="text-base font-medium text-[#22223b] hover:text-[#588157] transition">About</a>
+            <a href="brands.html" class="text-base font-medium text-[#22223b] hover:text-[#588157] transition">Brands</a>
+            <a href="projects.html" class="text-base font-medium text-[#22223b] hover:text-[#588157] transition">Projects</a>
+            <a href="contact.html" class="text-base font-medium text-[#22223b] hover:text-[#588157] transition">Contact Us</a>
+          </nav>
+        </div>
+      </header>
+
+  <!-- Products Page Content -->
+  <main class="max-w-7xl mx-auto px-4 py-10 flex gap-8">
+    <!-- Sidebar Categories -->
+    <aside class="w-64">
+      <h3 class="text-2xl font-bold mb-6 text-[#22223b]">Categories</h3>
+      <div id="categories"></div>
+    </aside>
+    <!-- Product Grid -->
+    <section class="flex-1">
+      <h2 class="text-3xl font-bold mb-6 text-[#588157]">Our Products</h2>
+      <div id="product-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"></div>
+      <div id="no-results" class="hidden text-center text-gray-500 mt-10">No products found.</div>
+    </section>
+  </main>
+
+  <script>
+    // Category and subcategory data (same as dropdown)
+    const categoriesData = [
+      { key: 'bathroom-fittings', name: 'Bathroom Fittings', sub: [
+        'Angle Valves', 'Basin Mixers', 'Bath Mixer', 'Dial Mixers', 'Free Standing Basin Mixer', 'Long Basin Mixer', 'Shower Mixer', 'Spout', 'Three Hole Basin Mixer'
+      ]},
+      { key: 'bathtubs', name: 'Bathtubs', sub: [
+        'Children Bathtub', 'Corner Bathtub', 'Free Standing Bathtub', 'Built-In Bathtub', 'Whirlpool Massage Bathtub', 'Jacuzzis', 'Walk-in Bathtub', 'Waterfall Bathtub', 'Window Bathtub'
+      ]},
+      { key: 'sanitary-ware', name: 'Sanitaryware', sub: [
+        'Toilets', 'Bidets', 'Urinals', 'Wash Basins'
+      ]},
+      { key: 'shower-systems', name: 'Shower Systems', sub: [
+        'Rain Showers', 'Hand Showers', 'Shower Panels'
+      ]},
+      { key: 'bathroom-accessories', name: 'Bathroom Accessories', sub: [
+        'Coat Hook', 'Vanities and Cabinets', 'Paper Holder', 'Towel Rail', 'Towel Ring', 'Towel Shelf'
+      ]},
+      { key: 'floor-tiles', name: 'Floor Tiles', sub: [
+        'Porcelain', 'Ceramic', 'Marble', 'Granite'
+      ]},
+      { key: 'wall-tiles', name: 'Wall Tiles', sub: [
+        'Glossy Tiles', 'Matte Tiles', 'Textured Tiles'
+      ]},
+      { key: 'slabs-countertops', name: 'Slabs & Countertops', sub: [
+        'Quartz', 'Granite', 'Marble'
+      ]},
+      { key: 'tile-materials', name: 'Tiles Materials', sub: [
+        'Porcelain', 'Ceramic', 'Stone'
+      ]}
+    ];
+
+    // Store loaded products globally
+    let allProducts = [];
+
+    // Render categories with dropdown subcategories and filtering
+    const categoriesDiv = document.getElementById('categories');
+    categoriesData.forEach((cat, idx) => {
+      const catDiv = document.createElement('div');
+      catDiv.className = "mb-1";
+      catDiv.innerHTML = `
+        <div class="flex items-center justify-between cursor-pointer rounded-lg px-4 py-2 cat-hover transition font-medium"
+             data-key="${cat.key}">
+          <span>${cat.name}</span>
+          <svg class="w-4 h-4 ml-2 transition-transform duration-200" style="transform: rotate(0deg);" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+          </svg>
+        </div>
+        <div class="subcats hidden pl-6">
+          ${cat.sub.map(sub => `<div class="py-1 px-2 rounded subcat-hover cursor-pointer text-sm" data-cat="${cat.name}" data-subcat="${sub}">${sub}</div>`).join('')}
+        </div>
+      `;
+      categoriesDiv.appendChild(catDiv);
+
+      // Dropdown logic
+      const header = catDiv.querySelector('div.flex');
+      const subcats = catDiv.querySelector('.subcats');
+      const arrow = catDiv.querySelector('svg');
+      header.addEventListener('mouseenter', () => header.classList.add('cat-active'));
+      header.addEventListener('mouseleave', () => header.classList.remove('cat-active'));
+      header.addEventListener('click', () => {
+        // Close others
+        document.querySelectorAll('#categories .subcats').forEach(s => { if (s !== subcats) s.classList.add('hidden'); });
+        document.querySelectorAll('#categories .flex').forEach(h => { if (h !== header) h.querySelector('svg').style.transform = 'rotate(0deg)'; });
+        // Toggle this
+        subcats.classList.toggle('hidden');
+        arrow.style.transform = subcats.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+      });
+
+      // Subcategory click logic
+      subcats.querySelectorAll('.subcat-hover').forEach(subcatDiv => {
+        subcatDiv.addEventListener('click', () => {
+          // Filter products by category and subcategory
+          const catName = subcatDiv.getAttribute('data-cat');
+          const subcatName = subcatDiv.getAttribute('data-subcat');
+          renderProducts(allProducts.filter(p => p.category === catName && p.subcategory === subcatName));
+        });
+      });
+    });
+
+    // Render products function (minimal, modern, consistent)
+    function renderProducts(products) {
+      const list = document.getElementById('product-list');
+      const noResults = document.getElementById('no-results');
+      list.innerHTML = '';
+      if (!products.length) {
+        noResults.classList.remove('hidden');
+        return;
+      }
+      noResults.classList.add('hidden');
+      products.forEach(product => {
+        const card = document.createElement('div');
+        card.className = "product-card";
+        card.innerHTML = `
+          <a href="product.html?id=${product.id}" class="block h-full">
+            <div class="product-img-area">
+              <img src="${product.image}" alt="${product.name}" />
+            </div>
+            <div class="product-info-bar">
+              <div class="product-title" title="${product.name}">${product.name}</div>
+              <div class="product-price">Rs. ${product.price}</div>
+            </div>
+          </a>
+        `;
+        list.appendChild(card);
+      });
+    }
+
+    // Load products and render all by default
+    fetch('products.json')
+      .then(res => res.json())
+      .then(products => {
+        allProducts = products;
+        renderProducts(allProducts);
+      });
+  </script>
+</body>
+</html>
